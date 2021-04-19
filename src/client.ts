@@ -93,6 +93,7 @@ export default class Client {
   }
 
   async join(sid: string, uid: string) {
+    console.log('JOINING (1)');
     this.transports = {
       [Role.pub]: new Transport(Role.pub, this.signal, this.config),
       [Role.sub]: new Transport(Role.sub, this.signal, this.config),
